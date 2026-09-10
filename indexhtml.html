@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)file:///C:/Users/ademir.santos/Downloads/app_de_treino_ilustrado_rastreador%20(1).html -->
+<html lang="pt-BR" class="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>FitFlow - Treino Ilustrado &amp; Tracker</title>
+  <!-- Tailwind CSS -->
+  <script src="./FitFlow - Treino Ilustrado &amp; Tracker_files/saved_resource"></script>
+  <!-- Tone.js para efeitos sonoros de descanso -->
+  <script src="./FitFlow - Treino Ilustrado &amp; Tracker_files/Tone.js.transferir"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./FitFlow - Treino Ilustrado &amp; Tracker_files/css2" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+            },
+            accent: {
+              orange: '#f97316',
+              emerald: '#10b981',
+              purple: '#8b5cf6',
+              rose: '#f43f5e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Custom styles for mobile app feeling */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    input, textarea {
+      user-select: text;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .tap-scale {
+      transition: transform 0.1s ease-out;
+    }
+    .tap-scale:active {
+      transform: scale(0.96);
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-0{bottom:0px}.left-0{left:0px}.left-1\/2{left:50%}.right-0{right:0px}.top-0{top:0px}.top-5{top:1.25rem}.z-10{z-index:10}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-1\.5{height:0.375rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-3{height:0.75rem}.max-h-\[85vh\]{max-height:85vh}.min-h-screen{min-height:100vh}.w-0{width:0px}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-full{width:100%}.w-14{width:3.5rem}.w-3{width:0.75rem}.min-w-\[72px\]{min-width:72px}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-20{--tw-translate-y:-5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-rotate-90{--tw-rotate:-90deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-0\.5{gap:0.125rem}.gap-1{gap:0.25rem}.gap-3{gap:0.75rem}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-3\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.875rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-cyan-500\/30{border-color:rgb(6 182 212 / 0.3)}.border-cyan-800\/40{border-color:rgb(21 94 117 / 0.4)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/40{border-color:rgb(51 65 85 / 0.4)}.border-slate-700\/50{border-color:rgb(51 65 85 / 0.5)}.border-slate-700\/60{border-color:rgb(51 65 85 / 0.6)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-800\/80{border-color:rgb(30 41 59 / 0.8)}.border-cyan-400{--tw-border-opacity:1;border-color:rgb(34 211 238 / var(--tw-border-opacity, 1))}.border-slate-800\/90{border-color:rgb(30 41 59 / 0.9)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-cyan-500{--tw-bg-opacity:1;background-color:rgb(6 182 212 / var(--tw-bg-opacity, 1))}.bg-cyan-500\/10{background-color:rgb(6 182 212 / 0.1)}.bg-cyan-500\/20{background-color:rgb(6 182 212 / 0.2)}.bg-cyan-900\/30{background-color:rgb(22 78 99 / 0.3)}.bg-cyan-950\/40{background-color:rgb(8 51 68 / 0.4)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-purple-500\/20{background-color:rgb(168 85 247 / 0.2)}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/60{background-color:rgb(30 41 59 / 0.6)}.bg-slate-800\/70{background-color:rgb(30 41 59 / 0.7)}.bg-slate-800\/80{background-color:rgb(30 41 59 / 0.8)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/50{background-color:rgb(15 23 42 / 0.5)}.bg-slate-900\/90{background-color:rgb(15 23 42 / 0.9)}.bg-slate-900\/95{background-color:rgb(15 23 42 / 0.95)}.bg-cyan-950\/60{background-color:rgb(8 51 68 / 0.6)}.bg-slate-800\/50{background-color:rgb(30 41 59 / 0.5)}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-slate-950\/60{background-color:rgb(2 6 23 / 0.6)}.bg-slate-950\/80{background-color:rgb(2 6 23 / 0.8)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-cyan-500{--tw-gradient-from:#06b6d4 var(--tw-gradient-from-position);--tw-gradient-to:rgb(6 182 212 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-900{--tw-gradient-from:#0f172a var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-emerald-400{--tw-gradient-to:#34d399 var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.to-cyan-600{--tw-gradient-to:#0891b2 var(--tw-gradient-to-position)}.stroke-\[2\]{stroke-width:2}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-2\.5{padding:0.625rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pb-1{padding-bottom:0.25rem}.pb-28{padding-bottom:7rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-sans{font-family:"Plus Jakarta Sans", sans-serif}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-cyan-200\/90{color:rgb(165 243 252 / 0.9)}.text-cyan-300{--tw-text-opacity:1;color:rgb(103 232 249 / var(--tw-text-opacity, 1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity, 1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-80{opacity:0.8}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-cyan-500\/20{--tw-shadow-color:rgb(6 182 212 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-500\/20{--tw-shadow-color:rgb(16 185 129 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:border-slate-700\/80:hover{border-color:rgb(51 65 85 / 0.8)}.hover\:bg-cyan-400:hover{--tw-bg-opacity:1;background-color:rgb(34 211 238 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:text-rose-300:hover{--tw-text-opacity:1;color:rgb(253 164 175 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-slate-200:hover{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.focus\:border-cyan-400:focus{--tw-border-opacity:1;border-color:rgb(34 211 238 / var(--tw-border-opacity, 1))}</style></head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans flex flex-col antialiased">
+  
+  <!-- Header Fixo Superior -->
+  <header class="sticky top-0 z-30 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/80 px-4 py-3">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+          <svg class="w-6 h-6 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-base font-bold tracking-tight text-white flex items-center gap-1.5">
+            FitFlow Pro
+            <span class="text-[10px] uppercase font-extrabold px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">ABCDE</span>
+          </h1>
+          <p class="text-xs text-slate-400 font-medium" id="current-day-badge">Segunda-feira • Pernas (Quadríceps)</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center space-x-2">
+        <button id="btn-guide-modal" class="p-2 rounded-lg bg-slate-800/80 text-slate-300 hover:text-white tap-scale border border-slate-700/50" title="Comparativo de Apps">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+        </button>
+        <button id="btn-info-modal" class="p-2 rounded-lg bg-slate-800/80 text-slate-300 hover:text-white tap-scale border border-slate-700/50" title="Informações e Dicas">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Container Principal -->
+  <main class="flex-1 max-w-md w-full mx-auto p-4 pb-28 space-y-4">
+
+    <!-- Carrossel de Dias da Semana -->
+    <section>
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Dias de Treino</span>
+        <span id="session-progress-text" class="text-xs font-semibold text-cyan-400">0% Concluído (0/22)</span>
+      </div>
+      
+      <!-- Barra de progresso geral do dia -->
+      <div class="w-full bg-slate-800/80 rounded-full h-1.5 mb-3 overflow-hidden">
+        <div id="session-progress-bar" class="bg-gradient-to-r from-cyan-500 to-emerald-400 h-1.5 rounded-full transition-all duration-300 w-0" style="width: 0%;"></div>
+      </div>
+
+      <!-- Abas de dias em rolagem horizontal -->
+      <div class="flex space-x-2 overflow-x-auto pb-1 custom-scrollbar" id="day-tabs-container"><button class="flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-semibold tap-scale transition-all flex flex-col items-center min-w-[72px] border bg-gradient-to-b from-cyan-500 to-cyan-600 text-slate-950 border-cyan-400 font-bold shadow-lg shadow-cyan-500/20">
+          <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">Treino A</span>
+          <span class="text-xs font-extrabold mt-0.5">Segunda</span>
+        </button><button class="flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-semibold tap-scale transition-all flex flex-col items-center min-w-[72px] border bg-slate-900/80 text-slate-400 hover:text-slate-200 border-slate-800">
+          <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">Treino B</span>
+          <span class="text-xs font-extrabold mt-0.5">Terça</span>
+        </button><button class="flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-semibold tap-scale transition-all flex flex-col items-center min-w-[72px] border bg-slate-900/80 text-slate-400 hover:text-slate-200 border-slate-800">
+          <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">Treino C</span>
+          <span class="text-xs font-extrabold mt-0.5">Quarta</span>
+        </button><button class="flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-semibold tap-scale transition-all flex flex-col items-center min-w-[72px] border bg-slate-900/80 text-slate-400 hover:text-slate-200 border-slate-800">
+          <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">Treino D</span>
+          <span class="text-xs font-extrabold mt-0.5">Quinta</span>
+        </button><button class="flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-semibold tap-scale transition-all flex flex-col items-center min-w-[72px] border bg-slate-900/80 text-slate-400 hover:text-slate-200 border-slate-800">
+          <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">Treino E</span>
+          <span class="text-xs font-extrabold mt-0.5">Sexta</span>
+        </button><button class="flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-semibold tap-scale transition-all flex flex-col items-center min-w-[72px] border bg-slate-900/80 text-slate-400 hover:text-slate-200 border-slate-800">
+          <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">Treino F</span>
+          <span class="text-xs font-extrabold mt-0.5">Sábado</span>
+        </button></div>
+    </section>
+
+    <!-- Card Informativo do Treino Selecionado -->
+    <div id="day-summary-card" class="relative overflow-hidden rounded-2xl p-4 bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 border border-slate-800 shadow-xl">
+      <div class="relative z-10 flex items-start justify-between">
+        <div>
+          <span id="day-tag" class="inline-block text-[11px] font-bold px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 mb-1.5">Treino A</span>
+          <h2 id="day-title" class="text-lg font-bold text-white">Pernas (Quadríceps)</h2>
+          <p id="day-desc" class="text-xs text-slate-400 mt-0.5">6 Exercícios • Foco em execução limpa</p>
+        </div>
+        <div id="day-icon-container" class="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700/50 flex items-center justify-center text-cyan-400">
+            <svg class="w-10 h-10 text-cyan-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <path d="M22 6 L42 6 L40 18 L24 18 Z" stroke-width="2" stroke-linejoin="round" fill="rgba(6,182,212,0.1)"></path>
+              <!-- Coxas com destaque -->
+              <path d="M22 18 C20 28, 20 38, 24 46 L30 46 C27 36, 27 26, 28 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <path d="M42 18 C44 28, 44 38, 40 46 L34 46 C37 36, 37 26, 36 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <!-- Joelhos e pernas -->
+              <path d="M24 46 L24 58 L28 58 L28 46" stroke-width="2"></path>
+              <path d="M40 46 L40 58 L36 58 L36 46" stroke-width="2"></path>
+            </svg></div>
+      </div>
+      
+      <!-- Detalhes do Volume e Tempo Estimado -->
+      <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+        <div class="flex items-center space-x-1.5 text-slate-300">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span id="total-sets-count">22 Séries Totais</span>
+        </div>
+        <div class="flex items-center space-x-1.5 text-slate-300">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span id="estimated-time">~55 min</span>
+        </div>
+        <button id="btn-reset-day" class="text-[11px] text-rose-400 hover:text-rose-300 font-medium tap-scale">
+          Zerar Séries
+        </button>
+      </div>
+    </div>
+
+    <!-- Lista de Exercícios -->
+    <div id="exercise-list" class="space-y-3.5"><div class="rounded-2xl bg-slate-900/90 border border-slate-800/90 p-4 shadow-sm hover:border-slate-700/80 transition-all">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-slate-800/80 border border-slate-700/50 flex-shrink-0">
+                
+            <svg class="w-10 h-10 text-cyan-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <path d="M22 6 L42 6 L40 18 L24 18 Z" stroke-width="2" stroke-linejoin="round" fill="rgba(6,182,212,0.1)"></path>
+              <!-- Coxas com destaque -->
+              <path d="M22 18 C20 28, 20 38, 24 46 L30 46 C27 36, 27 26, 28 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <path d="M42 18 C44 28, 44 38, 40 46 L34 46 C37 36, 37 26, 36 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <!-- Joelhos e pernas -->
+              <path d="M24 46 L24 58 L28 58 L28 46" stroke-width="2"></path>
+              <path d="M40 46 L40 58 L36 58 L36 46" stroke-width="2"></path>
+            </svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                  Quadríceps Isolado
+                </span>
+                <h3 class="text-sm font-bold text-white mt-1">Cadeira extensora</h3>
+                <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-0.5">
+                  <span class="font-medium text-slate-300">4 séries × 12-15</span>
+                  <span>•</span>
+                  <span class="text-amber-400 flex items-center gap-0.5">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    60s descanso
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <button onclick="startRestTimer(60, 'Cadeira extensora')" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 tap-scale border border-slate-700/60" title="Iniciar Descanso">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Instruções de Execução do PDF -->
+          <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-3 text-[11px] text-slate-300 flex items-start gap-2">
+            <span class="text-cyan-400 font-bold text-xs">🎯</span>
+            <p class="leading-tight"><strong class="text-slate-200">Execução:</strong> Suba contraindo totalmente o quadríceps, segure 1 segundo no topo e desça bem devagar sem deixar a carga cair.</p>
+          </div>
+
+          <!-- Lista de Séries -->
+          <div class="space-y-1.5">
+            
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 1</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_0', 0, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_0', 0, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_0', 0, 60, 'Cadeira extensora')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 2</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_0', 1, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_0', 1, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_0', 1, 60, 'Cadeira extensora')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 3</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_0', 2, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_0', 2, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_0', 2, 60, 'Cadeira extensora')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 4</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_0', 3, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_0', 3, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_0', 3, 60, 'Cadeira extensora')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+          </div>
+        </div><div class="rounded-2xl bg-slate-900/90 border border-slate-800/90 p-4 shadow-sm hover:border-slate-700/80 transition-all">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-slate-800/80 border border-slate-700/50 flex-shrink-0">
+                
+            <svg class="w-10 h-10 text-cyan-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <path d="M22 6 L42 6 L40 18 L24 18 Z" stroke-width="2" stroke-linejoin="round" fill="rgba(6,182,212,0.1)"></path>
+              <!-- Coxas com destaque -->
+              <path d="M22 18 C20 28, 20 38, 24 46 L30 46 C27 36, 27 26, 28 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <path d="M42 18 C44 28, 44 38, 40 46 L34 46 C37 36, 37 26, 36 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <!-- Joelhos e pernas -->
+              <path d="M24 46 L24 58 L28 58 L28 46" stroke-width="2"></path>
+              <path d="M40 46 L40 58 L36 58 L36 46" stroke-width="2"></path>
+            </svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                  Quadríceps &amp; Glúteos
+                </span>
+                <h3 class="text-sm font-bold text-white mt-1">Agachamento guiado</h3>
+                <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-0.5">
+                  <span class="font-medium text-slate-300">4 séries × 8-10</span>
+                  <span>•</span>
+                  <span class="text-amber-400 flex items-center gap-0.5">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    90s descanso
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <button onclick="startRestTimer(90, 'Agachamento guiado')" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 tap-scale border border-slate-700/60" title="Iniciar Descanso">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Instruções de Execução do PDF -->
+          <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-3 text-[11px] text-slate-300 flex items-start gap-2">
+            <span class="text-cyan-400 font-bold text-xs">🎯</span>
+            <p class="leading-tight"><strong class="text-slate-200">Execução:</strong> Pés alinhados, desça controlando até 90° mantendo coluna neutra e suba empurrando com os calcanhares.</p>
+          </div>
+
+          <!-- Lista de Séries -->
+          <div class="space-y-1.5">
+            
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 1</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_1', 0, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="8-10" value="8" onchange="updateReps('segunda_1', 0, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_1', 0, 90, 'Agachamento guiado')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 2</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_1', 1, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="8-10" value="8" onchange="updateReps('segunda_1', 1, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_1', 1, 90, 'Agachamento guiado')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 3</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_1', 2, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="8-10" value="8" onchange="updateReps('segunda_1', 2, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_1', 2, 90, 'Agachamento guiado')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 4</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_1', 3, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="8-10" value="8" onchange="updateReps('segunda_1', 3, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_1', 3, 90, 'Agachamento guiado')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+          </div>
+        </div><div class="rounded-2xl bg-slate-900/90 border border-slate-800/90 p-4 shadow-sm hover:border-slate-700/80 transition-all">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-slate-800/80 border border-slate-700/50 flex-shrink-0">
+                
+            <svg class="w-10 h-10 text-cyan-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <path d="M22 6 L42 6 L40 18 L24 18 Z" stroke-width="2" stroke-linejoin="round" fill="rgba(6,182,212,0.1)"></path>
+              <!-- Coxas com destaque -->
+              <path d="M22 18 C20 28, 20 38, 24 46 L30 46 C27 36, 27 26, 28 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <path d="M42 18 C44 28, 44 38, 40 46 L34 46 C37 36, 37 26, 36 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <!-- Joelhos e pernas -->
+              <path d="M24 46 L24 58 L28 58 L28 46" stroke-width="2"></path>
+              <path d="M40 46 L40 58 L36 58 L36 46" stroke-width="2"></path>
+            </svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                  Pernas Geral
+                </span>
+                <h3 class="text-sm font-bold text-white mt-1">Leg press 45°</h3>
+                <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-0.5">
+                  <span class="font-medium text-slate-300">4 séries × 10-12</span>
+                  <span>•</span>
+                  <span class="text-amber-400 flex items-center gap-0.5">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    90s descanso
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <button onclick="startRestTimer(90, 'Leg press 45°')" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 tap-scale border border-slate-700/60" title="Iniciar Descanso">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Instruções de Execução do PDF -->
+          <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-3 text-[11px] text-slate-300 flex items-start gap-2">
+            <span class="text-cyan-400 font-bold text-xs">🎯</span>
+            <p class="leading-tight"><strong class="text-slate-200">Execução:</strong> Desça até o limite sem tirar o quadril do banco e suba sem travar totalmente os joelhos.</p>
+          </div>
+
+          <!-- Lista de Séries -->
+          <div class="space-y-1.5">
+            
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 1</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_2', 0, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="10-12" value="10" onchange="updateReps('segunda_2', 0, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_2', 0, 90, 'Leg press 45°')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 2</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_2', 1, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="10-12" value="10" onchange="updateReps('segunda_2', 1, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_2', 1, 90, 'Leg press 45°')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 3</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_2', 2, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="10-12" value="10" onchange="updateReps('segunda_2', 2, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_2', 2, 90, 'Leg press 45°')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 4</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_2', 3, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="10-12" value="10" onchange="updateReps('segunda_2', 3, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_2', 3, 90, 'Leg press 45°')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+          </div>
+        </div><div class="rounded-2xl bg-slate-900/90 border border-slate-800/90 p-4 shadow-sm hover:border-slate-700/80 transition-all">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-slate-800/80 border border-slate-700/50 flex-shrink-0">
+                
+            <svg class="w-10 h-10 text-cyan-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <path d="M22 6 L42 6 L40 18 L24 18 Z" stroke-width="2" stroke-linejoin="round" fill="rgba(6,182,212,0.1)"></path>
+              <!-- Coxas com destaque -->
+              <path d="M22 18 C20 28, 20 38, 24 46 L30 46 C27 36, 27 26, 28 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <path d="M42 18 C44 28, 44 38, 40 46 L34 46 C37 36, 37 26, 36 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <!-- Joelhos e pernas -->
+              <path d="M24 46 L24 58 L28 58 L28 46" stroke-width="2"></path>
+              <path d="M40 46 L40 58 L36 58 L36 46" stroke-width="2"></path>
+            </svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                  Quadríceps &amp; Estabilidade
+                </span>
+                <h3 class="text-sm font-bold text-white mt-1">Passada (Afundo)</h3>
+                <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-0.5">
+                  <span class="font-medium text-slate-300">3 séries × 10-12</span>
+                  <span>•</span>
+                  <span class="text-amber-400 flex items-center gap-0.5">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    60s descanso
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <button onclick="startRestTimer(60, 'Passada (Afundo)')" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 tap-scale border border-slate-700/60" title="Iniciar Descanso">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Instruções de Execução do PDF -->
+          <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-3 text-[11px] text-slate-300 flex items-start gap-2">
+            <span class="text-cyan-400 font-bold text-xs">🎯</span>
+            <p class="leading-tight"><strong class="text-slate-200">Execução:</strong> Passo firme, joelho da frente alinhado ao pé e controle total do movimento na descida.</p>
+          </div>
+
+          <!-- Lista de Séries -->
+          <div class="space-y-1.5">
+            
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 1</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_3', 0, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="10-12" value="10" onchange="updateReps('segunda_3', 0, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_3', 0, 60, 'Passada (Afundo)')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 2</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_3', 1, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="10-12" value="10" onchange="updateReps('segunda_3', 1, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_3', 1, 60, 'Passada (Afundo)')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 3</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_3', 2, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="10-12" value="10" onchange="updateReps('segunda_3', 2, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_3', 2, 60, 'Passada (Afundo)')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+          </div>
+        </div><div class="rounded-2xl bg-slate-900/90 border border-slate-800/90 p-4 shadow-sm hover:border-slate-700/80 transition-all">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-slate-800/80 border border-slate-700/50 flex-shrink-0">
+                
+            <svg class="w-10 h-10 text-cyan-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <path d="M22 6 L42 6 L40 18 L24 18 Z" stroke-width="2" stroke-linejoin="round" fill="rgba(6,182,212,0.1)"></path>
+              <!-- Coxas com destaque -->
+              <path d="M22 18 C20 28, 20 38, 24 46 L30 46 C27 36, 27 26, 28 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <path d="M42 18 C44 28, 44 38, 40 46 L34 46 C37 36, 37 26, 36 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <!-- Joelhos e pernas -->
+              <path d="M24 46 L24 58 L28 58 L28 46" stroke-width="2"></path>
+              <path d="M40 46 L40 58 L36 58 L36 46" stroke-width="2"></path>
+            </svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                  Adutores da Coxa
+                </span>
+                <h3 class="text-sm font-bold text-white mt-1">Cadeira adutora</h3>
+                <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-0.5">
+                  <span class="font-medium text-slate-300">3 séries × 12-15</span>
+                  <span>•</span>
+                  <span class="text-amber-400 flex items-center gap-0.5">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    45s descanso
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <button onclick="startRestTimer(45, 'Cadeira adutora')" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 tap-scale border border-slate-700/60" title="Iniciar Descanso">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Instruções de Execução do PDF -->
+          <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-3 text-[11px] text-slate-300 flex items-start gap-2">
+            <span class="text-cyan-400 font-bold text-xs">🎯</span>
+            <p class="leading-tight"><strong class="text-slate-200">Execução:</strong> Feche as pernas controlando o peso e segure 1 segundo no ponto de contração máxima.</p>
+          </div>
+
+          <!-- Lista de Séries -->
+          <div class="space-y-1.5">
+            
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 1</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_4', 0, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_4', 0, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_4', 0, 45, 'Cadeira adutora')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 2</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_4', 1, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_4', 1, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_4', 1, 45, 'Cadeira adutora')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 3</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_4', 2, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_4', 2, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_4', 2, 45, 'Cadeira adutora')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+          </div>
+        </div><div class="rounded-2xl bg-slate-900/90 border border-slate-800/90 p-4 shadow-sm hover:border-slate-700/80 transition-all">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-slate-800/80 border border-slate-700/50 flex-shrink-0">
+                
+            <svg class="w-10 h-10 text-cyan-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <path d="M22 6 L42 6 L40 18 L24 18 Z" stroke-width="2" stroke-linejoin="round" fill="rgba(6,182,212,0.1)"></path>
+              <!-- Coxas com destaque -->
+              <path d="M22 18 C20 28, 20 38, 24 46 L30 46 C27 36, 27 26, 28 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <path d="M42 18 C44 28, 44 38, 40 46 L34 46 C37 36, 37 26, 36 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"></path>
+              <!-- Joelhos e pernas -->
+              <path d="M24 46 L24 58 L28 58 L28 46" stroke-width="2"></path>
+              <path d="M40 46 L40 58 L36 58 L36 46" stroke-width="2"></path>
+            </svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                  Panturrilhas (Sóleo)
+                </span>
+                <h3 class="text-sm font-bold text-white mt-1">Panturrilha no burrinho</h3>
+                <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-0.5">
+                  <span class="font-medium text-slate-300">4 séries × 12-15</span>
+                  <span>•</span>
+                  <span class="text-amber-400 flex items-center gap-0.5">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    45s descanso
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <button onclick="startRestTimer(45, 'Panturrilha no burrinho')" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 tap-scale border border-slate-700/60" title="Iniciar Descanso">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Instruções de Execução do PDF -->
+          <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-3 text-[11px] text-slate-300 flex items-start gap-2">
+            <span class="text-cyan-400 font-bold text-xs">🎯</span>
+            <p class="leading-tight"><strong class="text-slate-200">Execução:</strong> Desça alongando bem o tendão e suba até o máximo da ponta dos pés, segurando 1s no topo.</p>
+          </div>
+
+          <!-- Lista de Séries -->
+          <div class="space-y-1.5">
+            
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 1</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_5', 0, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_5', 0, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_5', 0, 45, 'Panturrilha no burrinho')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 2</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_5', 1, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_5', 1, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_5', 1, 45, 'Panturrilha no burrinho')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 3</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_5', 2, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_5', 2, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_5', 2, 45, 'Panturrilha no burrinho')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-800/50 border border-slate-700/40 text-xs">
+              <span class="font-bold w-12 text-slate-400">Série 4</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="" onchange="updateWeight('segunda_5', 3, this.value)" class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="12-15" value="12" onchange="updateReps('segunda_5', 3, this.value)" class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('segunda_5', 3, 45, 'Panturrilha no burrinho')" class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-slate-300">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </button>
+            </div>
+          
+          </div>
+        </div></div>
+
+  </main>
+
+  <!-- Barra Flutuante de Descanso / Timer -->
+  <div id="rest-timer-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 px-4 py-3 transform transition-transform duration-300 shadow-2xl">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="relative w-11 h-11 flex items-center justify-center">
+          <svg class="w-11 h-11 -rotate-90">
+            <circle cx="22" cy="22" r="18" stroke="currentColor" stroke-width="3.5" class="text-slate-800" fill="transparent"></circle>
+            <circle id="timer-progress-ring" cx="22" cy="22" r="18" stroke="currentColor" stroke-width="3.5" class="text-cyan-400 transition-all duration-200" fill="transparent" stroke-dasharray="113.1" stroke-dashoffset="0" stroke-linecap="round"></circle>
+          </svg>
+          <span id="timer-seconds" class="absolute text-xs font-bold text-white font-mono">00s</span>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-slate-200 flex items-center gap-1.5">
+            Descanso Ativo
+            <span id="timer-label" class="text-[10px] bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded border border-slate-700 font-mono">Próxima série</span>
+          </p>
+          <p class="text-[11px] text-slate-400">Respire fundo e recupere o fôlego</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center space-x-2">
+        <button id="btn-add-15s" class="px-2.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white text-xs font-medium border border-slate-700/60 tap-scale">
+          +15s
+        </button>
+        <button id="btn-skip-timer" class="px-3 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold shadow-md shadow-cyan-500/20 tap-scale">
+          Pular
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 1: Comparativo de Melhores Apps para Celular -->
+  <div id="modal-guide" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-md max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900/50">
+        <div class="flex items-center gap-2">
+          <div class="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-base font-bold text-white">Sistemas e Apps Recomendados</h3>
+        </div>
+        <button id="btn-close-guide" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="p-4 overflow-y-auto space-y-4 text-sm text-slate-300 custom-scrollbar">
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Para ter este treino com ilustrações animadas, cronômetros e histórico no celular, estas são as melhores abordagens:
+        </p>
+
+        <!-- Opção 1: Este Web App -->
+        <div class="p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/30">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-cyan-300 text-sm flex items-center gap-1.5">
+              ⭐ Opção 1: Este Web App (FitFlow)
+            </h4>
+            <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded font-bold">100% Gratuito</span>
+          </div>
+          <p class="text-xs text-slate-300 mt-1">
+            Já contém toda a sua rotina do PDF pré-configurada com ilustrações anatômicas em SVG, tempos de descanso e notas.
+          </p>
+          <div class="mt-2 text-[11px] text-cyan-200/90 bg-cyan-900/30 p-2 rounded border border-cyan-800/40">
+            📲 <strong>Como instalar no celular:</strong> Abra no Safari/Chrome do celular &gt; toque no botão <em>"Compartilhar"</em> ou <em>Menu (3 pontinhos)</em> &gt; <strong>"Adicionar à Tela de Início"</strong>. Ele se comporta como um app nativo!
+          </div>
+        </div>
+
+        <!-- Opção 2: Hevy -->
+        <div class="p-3 rounded-xl bg-slate-800/70 border border-slate-700/60">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white text-sm">📱 Hevy (iOS &amp; Android)</h4>
+            <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-semibold">Mais Indicado</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1">
+            O aplicativo mais moderno para musculação. Possui ilustrações 3D de cada músculo, animações de execução, timer automático e comunidade social.
+          </p>
+        </div>
+
+        <!-- Opção 3: Strong -->
+        <div class="p-3 rounded-xl bg-slate-800/70 border border-slate-700/60">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white text-sm">📱 Strong Workout Tracker</h4>
+            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Clássico</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1">
+            Super limpo, minimalista e direto ao ponto. Excelente para registrar cargas e calcular progressão de sobrecarga.
+          </p>
+        </div>
+
+        <!-- Opção 4: GymRun / Alpha Progression -->
+        <div class="p-3 rounded-xl bg-slate-800/70 border border-slate-700/60">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white text-sm">📱 Alpha Progression / GymRun</h4>
+            <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded">Avançado</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1">
+            Focado em periodização científica e RPE/RIR com gráficos de progressão por grupo muscular.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Dicas de Execução e Orientações -->
+  <div id="modal-info" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-md max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900/50">
+        <h3 class="text-base font-bold text-white flex items-center gap-2">
+          <span>💡</span> Princípios de Execução do PDF
+        </h3>
+        <button id="btn-close-info" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="p-4 overflow-y-auto space-y-3 text-xs text-slate-300 custom-scrollbar leading-relaxed">
+        <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/40">
+          <strong class="text-cyan-400 block mb-1">⏱️ Cadência e Controle Excêntrico</strong>
+          Nunca deixe o peso despencar na descida. Controle o movimento por 2 a 3 segundos na fase excêntrica para maximizar a hipertrofia.
+        </div>
+        <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/40">
+          <strong class="text-emerald-400 block mb-1">🛡️ Fixação Escapular e Coluna Neutra</strong>
+          Em exercícios como Supino, Remada e Agachamentos, mantenha as escápulas aduzidas e o core bem ativado durante toda a série.
+        </div>
+        <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/40">
+          <strong class="text-amber-400 block mb-1">📈 Sobrecarga Progressiva</strong>
+          Anote as cargas e repetições em cada treino. O objetivo é sempre buscar 1 repetição a mais ou um leve incremento de carga a cada semana.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Toast Notification Customizada -->
+  <div id="toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-emerald-500 text-slate-950 font-bold text-xs px-4 py-2.5 rounded-full shadow-lg shadow-emerald-500/20 transform -translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+    </svg>
+    <span id="toast-message">Série concluída!</span>
+  </div>
+
+  <script>
+    /* ==========================================================================
+       DADOS COMPLETOS DA ROTINA DO PDF COM ILUSTRAÇÕES ANATÔMICAS VETORIAIS
+       ========================================================================== */
+    
+    // Gerador de Ilustrações Anatômicas em SVG Minimalista com Destaque Muscular
+    function getMuscleSVG(type) {
+      switch(type) {
+        case 'quadriceps':
+          return `
+            <svg class="w-10 h-10 text-cyan-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <path d="M22 6 L42 6 L40 18 L24 18 Z" stroke-width="2" stroke-linejoin="round" fill="rgba(6,182,212,0.1)"/>
+              <!-- Coxas com destaque -->
+              <path d="M22 18 C20 28, 20 38, 24 46 L30 46 C27 36, 27 26, 28 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"/>
+              <path d="M42 18 C44 28, 44 38, 40 46 L34 46 C37 36, 37 26, 36 18 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"/>
+              <!-- Joelhos e pernas -->
+              <path d="M24 46 L24 58 L28 58 L28 46" stroke-width="2"/>
+              <path d="M40 46 L40 58 L36 58 L36 46" stroke-width="2"/>
+            </svg>`;
+        case 'chest':
+          return `
+            <svg class="w-10 h-10 text-rose-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <circle cx="32" cy="12" r="6" stroke-width="2"/>
+              <!-- Ombros -->
+              <path d="M16 26 C20 22, 44 22, 48 26" stroke-width="2"/>
+              <!-- Peitoral com Destaque -->
+              <path d="M20 26 C20 35, 30 36, 32 30 C34 36, 44 35, 44 26 C38 23, 26 23, 20 26 Z" fill="rgba(244,63,94,0.6)" stroke-width="2" stroke="currentColor"/>
+              <!-- Tronco -->
+              <path d="M24 35 L26 52 L38 52 L40 35" stroke-width="2"/>
+            </svg>`;
+        case 'back':
+          return `
+            <svg class="w-10 h-10 text-emerald-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <circle cx="32" cy="12" r="6" stroke-width="2"/>
+              <!-- Dorsal / Costas com Destaque Triângulo V-Taper -->
+              <path d="M16 24 L48 24 L40 44 C36 42, 28 42, 24 44 Z" fill="rgba(16,185,129,0.6)" stroke-width="2" stroke="currentColor"/>
+              <path d="M32 24 L32 46" stroke-width="2" stroke-dasharray="2 2"/>
+              <path d="M26 44 L28 54 L36 54 L38 44" stroke-width="2"/>
+            </svg>`;
+        case 'hamstrings':
+          return `
+            <svg class="w-10 h-10 text-amber-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <!-- Glúteos e Posterior de Coxa -->
+              <path d="M22 14 C22 24, 30 26, 32 20 C34 26, 42 24, 42 14" stroke-width="2"/>
+              <path d="M23 24 C20 34, 21 42, 25 48 L29 48 C28 40, 29 32, 31 24 Z" fill="rgba(245,158,11,0.6)" stroke-width="2" stroke="currentColor"/>
+              <path d="M41 24 C44 34, 43 42, 39 48 L35 48 C36 40, 35 32, 33 24 Z" fill="rgba(245,158,11,0.6)" stroke-width="2" stroke="currentColor"/>
+              <path d="M25 48 L24 58 L28 58" stroke-width="2"/>
+              <path d="M39 48 L40 58 L36 58" stroke-width="2"/>
+            </svg>`;
+        case 'shoulders':
+          return `
+            <svg class="w-10 h-10 text-purple-400" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <circle cx="32" cy="12" r="6" stroke-width="2"/>
+              <!-- Deltoides com Destaque -->
+              <path d="M14 26 C12 33, 16 38, 20 34 C20 28, 17 24, 14 26 Z" fill="rgba(139,92,246,0.6)" stroke-width="2" stroke="currentColor"/>
+              <path d="M50 26 C52 33, 48 38, 44 34 C44 28, 47 24, 50 26 Z" fill="rgba(139,92,246,0.6)" stroke-width="2" stroke="currentColor"/>
+              <!-- Trapézio e Peito Central -->
+              <path d="M20 28 C26 24, 38 24, 44 28 L40 48 L24 48 Z" stroke-width="2"/>
+            </svg>`;
+        case 'arms':
+          return `
+            <svg class="w-10 h-10 text-cyan-300" viewBox="0 0 64 64" fill="none" stroke="currentColor">
+              <!-- Bíceps e Tríceps com Haltere -->
+              <rect x="10" y="28" width="6" height="12" rx="2" fill="currentColor"/>
+              <rect x="48" y="28" width="6" height="12" rx="2" fill="currentColor"/>
+              <path d="M13 34 L51 34" stroke-width="3"/>
+              <!-- Braço Flexionado com Destaque -->
+              <path d="M26 44 C22 36, 26 26, 32 26 C38 26, 42 36, 38 44 Z" fill="rgba(6,182,212,0.6)" stroke-width="2" stroke="currentColor"/>
+            </svg>`;
+        default:
+          return `
+            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>`;
+      }
+    }
+
+    const workoutData = [
+      {
+        id: "segunda",
+        dayName: "Segunda",
+        fullName: "Segunda-feira",
+        title: "Pernas (Quadríceps)",
+        tag: "Treino A",
+        muscleType: "quadriceps",
+        exercises: [
+          {
+            name: "Cadeira extensora",
+            sets: 4,
+            reps: "12-15",
+            rest: 60,
+            instructions: "Suba contraindo totalmente o quadríceps, segure 1 segundo no topo e desça bem devagar sem deixar a carga cair.",
+            muscleGroup: "Quadríceps Isolado",
+            target: "quadriceps"
+          },
+          {
+            name: "Agachamento guiado",
+            sets: 4,
+            reps: "8-10",
+            rest: 90,
+            instructions: "Pés alinhados, desça controlando até 90° mantendo coluna neutra e suba empurrando com os calcanhares.",
+            muscleGroup: "Quadríceps & Glúteos",
+            target: "quadriceps"
+          },
+          {
+            name: "Leg press 45°",
+            sets: 4,
+            reps: "10-12",
+            rest: 90,
+            instructions: "Desça até o limite sem tirar o quadril do banco e suba sem travar totalmente os joelhos.",
+            muscleGroup: "Pernas Geral",
+            target: "quadriceps"
+          },
+          {
+            name: "Passada (Afundo)",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Passo firme, joelho da frente alinhado ao pé e controle total do movimento na descida.",
+            muscleGroup: "Quadríceps & Estabilidade",
+            target: "quadriceps"
+          },
+          {
+            name: "Cadeira adutora",
+            sets: 3,
+            reps: "12-15",
+            rest: 45,
+            instructions: "Feche as pernas controlando o peso e segure 1 segundo no ponto de contração máxima.",
+            muscleGroup: "Adutores da Coxa",
+            target: "quadriceps"
+          },
+          {
+            name: "Panturrilha no burrinho",
+            sets: 4,
+            reps: "12-15",
+            rest: 45,
+            instructions: "Desça alongando bem o tendão e suba até o máximo da ponta dos pés, segurando 1s no topo.",
+            muscleGroup: "Panturrilhas (Sóleo)",
+            target: "quadriceps"
+          }
+        ]
+      },
+      {
+        id: "terca",
+        dayName: "Terça",
+        fullName: "Terça-feira",
+        title: "Peito + Tríceps + Core",
+        tag: "Treino B",
+        muscleType: "chest",
+        exercises: [
+          {
+            name: "Supino reto",
+            sets: 4,
+            reps: "6-8",
+            rest: 90,
+            instructions: "Escápulas fixas e aduzidas no banco, desça controlando até o peito e suba com força sem perder a postura.",
+            muscleGroup: "Peitoral Maior",
+            target: "chest"
+          },
+          {
+            name: "Voador peitoral (Peck Deck)",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Movimento em arco (como dar um abraço), contraia forte no final e retorne alongando devagar.",
+            muscleGroup: "Peitoral Medial",
+            target: "chest"
+          },
+          {
+            name: "Supino inclinado com halteres",
+            sets: 3,
+            reps: "8-10",
+            rest: 75,
+            instructions: "Controle total no banco em 30°-45°, focando na porção superior clavicular do peito.",
+            muscleGroup: "Peitoral Superior",
+            target: "chest"
+          },
+          {
+            name: "Crucifixo na polia alta",
+            sets: 3,
+            reps: "12-15",
+            rest: 60,
+            instructions: "Aproxime as mãos à frente e levemente para baixo, mantendo leve flexão nos cotovelos.",
+            muscleGroup: "Peitoral Inferior/Isolado",
+            target: "chest"
+          },
+          {
+            name: "Tríceps pulley com barra",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Cotovelos colados ao lado do tronco e faça a extensão completa do antebraço.",
+            muscleGroup: "Tríceps (Cabeça Lateral)",
+            target: "arms"
+          },
+          {
+            name: "Tríceps francês",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Controle total atrás da cabeça sem deixar os cotovelos abrirem em excesso.",
+            muscleGroup: "Tríceps (Cabeça Longa)",
+            target: "arms"
+          },
+          {
+            name: "Prancha abdominal",
+            sets: 3,
+            reps: "30 seg",
+            rest: 30,
+            instructions: "Corpo alinhado em linha reta da cabeça aos pés, glúteos e abdômen fortemente contraídos.",
+            muscleGroup: "Core & Estabilizadores",
+            target: "chest"
+          }
+        ]
+      },
+      {
+        id: "quarta",
+        dayName: "Quarta",
+        fullName: "Quarta-feira",
+        title: "Costas + Bíceps",
+        tag: "Treino C",
+        muscleType: "back",
+        exercises: [
+          {
+            name: "Puxada alta (Puxador frente)",
+            sets: 4,
+            reps: "8-10",
+            rest: 90,
+            instructions: "Puxe a barra em direção à parte superior do peito contraindo as costas, sem balançar o tronco.",
+            muscleGroup: "Latíssimo do Dorso",
+            target: "back"
+          },
+          {
+            name: "Pulldown na polia",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Braços estendidos com leve flexão de cotovelos, foque na dorsal puxando a barra para a coxa.",
+            muscleGroup: "Grande Dorsal Isolado",
+            target: "back"
+          },
+          {
+            name: "Puxada alta com triângulo",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Pegada neutra fechada, puxe até o esterno com controle total e escápulas ativas.",
+            muscleGroup: "Espessura Dorsal",
+            target: "back"
+          },
+          {
+            name: "Remada curvada com barra",
+            sets: 4,
+            reps: "8-10",
+            rest: 90,
+            instructions: "Coluna firme e inclinada a 45°, puxe a barra rente à coxa até a altura do umbigo.",
+            muscleGroup: "Dorsal e Rombóides",
+            target: "back"
+          },
+          {
+            name: "Remada cavalinho com triângulo",
+            sets: 3,
+            reps: "10-12",
+            rest: 75,
+            instructions: "Contração máxima no meio das costas, aproximando as escápulas no topo da remada.",
+            muscleGroup: "Trapézio e Rombóides",
+            target: "back"
+          },
+          {
+            name: "Rosca martelo",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Pegada neutra (palmas voltadas uma para a outra), sem usar impulso do corpo.",
+            muscleGroup: "Braquial e Braquiorradial",
+            target: "arms"
+          },
+          {
+            name: "Rosca direta no banco inclinado",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Braços posicionados atrás do tronco para alongamento máximo da cabeça longa do bíceps.",
+            muscleGroup: "Bíceps Braquial",
+            target: "arms"
+          }
+        ]
+      },
+      {
+        id: "quinta",
+        dayName: "Quinta",
+        fullName: "Quinta-feira",
+        title: "Pernas (Posterior e Glúteos)",
+        tag: "Treino D",
+        muscleType: "hamstrings",
+        exercises: [
+          {
+            name: "Cadeira flexora",
+            sets: 3,
+            reps: "12-15",
+            rest: 60,
+            instructions: "Flexione os joelhos controlando o movimento e segure 1 segundo no pico de contração.",
+            muscleGroup: "Isquiotibiais",
+            target: "hamstrings"
+          },
+          {
+            name: "Stiff com barra ou halteres",
+            sets: 4,
+            reps: "8-10",
+            rest: 90,
+            instructions: "Empurre o quadril para trás com joelhos semi-flexionados, mantendo a coluna completamente neutra.",
+            muscleGroup: "Posterior e Glúteos",
+            target: "hamstrings"
+          },
+          {
+            name: "Mesa flexora",
+            sets: 4,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Quadril colado no estofado, suba calcanhares até os glúteos e controle na volta.",
+            muscleGroup: "Isquiotibiais",
+            target: "hamstrings"
+          },
+          {
+            name: "Cadeira abdutora",
+            sets: 3,
+            reps: "12-15",
+            rest: 45,
+            instructions: "Abra as pernas com força e controle, mantendo a tensão contínua nos glúteos.",
+            muscleGroup: "Glúteo Médio/Mínimo",
+            target: "hamstrings"
+          },
+          {
+            name: "Agachamento sumô",
+            sets: 3,
+            reps: "10-12",
+            rest: 75,
+            instructions: "Pés afastados além da largura dos ombros e pontas a 45°, descendo com tronco ereto.",
+            muscleGroup: "Glúteos e Adutores",
+            target: "hamstrings"
+          },
+          {
+            name: "Agachamento búlgaro",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Pé de trás apoiado no banco, desça na vertical até o joelho quase tocar o chão.",
+            muscleGroup: "Quadríceps & Glúteo",
+            target: "hamstrings"
+          },
+          {
+            name: "Panturrilha no leg 45°",
+            sets: 4,
+            reps: "12-15",
+            rest: 45,
+            instructions: "Apoie apenas as pontas dos pés na borda da plataforma com amplitude completa.",
+            muscleGroup: "Gastrocnêmio",
+            target: "hamstrings"
+          }
+        ]
+      },
+      {
+        id: "sexta",
+        dayName: "Sexta",
+        fullName: "Sexta-feira",
+        title: "Ombros (Deltoides)",
+        tag: "Treino E",
+        muscleType: "shoulders",
+        exercises: [
+          {
+            name: "Desenvolvimento com halteres",
+            sets: 4,
+            reps: "8-10",
+            rest: 90,
+            instructions: "Suba os halteres acima da cabeça mantendo controle e estabilidade do tronco.",
+            muscleGroup: "Deltoide Anterior e Lateral",
+            target: "shoulders"
+          },
+          {
+            name: "Elevação lateral",
+            sets: 4,
+            reps: "12-15",
+            rest: 60,
+            instructions: "Eleve os braços até a linha dos ombros sem jogar o tronco ou dar impulso com as pernas.",
+            muscleGroup: "Deltoide Lateral",
+            target: "shoulders"
+          },
+          {
+            name: "Elevação frontal com barra na polia",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Controle constante da tensão na subida até a linha dos olhos e descida lenta.",
+            muscleGroup: "Deltoide Anterior",
+            target: "shoulders"
+          },
+          {
+            name: "Face pull",
+            sets: 3,
+            reps: "12-15",
+            rest: 60,
+            instructions: "Puxe a corda em direção ao rosto abrindo as mãos e ativando intensamente o posterior de ombro.",
+            muscleGroup: "Deltoide Posterior & Trapézio",
+            target: "shoulders"
+          },
+          {
+            name: "Desenvolvimento na máquina",
+            sets: 3,
+            reps: "10-12",
+            rest: 75,
+            instructions: "Mantenha o ritmo constante sem travar os cotovelos no topo.",
+            muscleGroup: "Ombro Completo",
+            target: "shoulders"
+          }
+        ]
+      },
+      {
+        id: "sabado",
+        dayName: "Sábado",
+        fullName: "Sábado (Opcional)",
+        title: "Braços + Core",
+        tag: "Treino F",
+        muscleType: "arms",
+        exercises: [
+          {
+            name: "Rosca direta com barra W (Banco Scott)",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Braços apoiados no banco, execução controlada focando no isolamento do bíceps.",
+            muscleGroup: "Bíceps (Pico)",
+            target: "arms"
+          },
+          {
+            name: "Rosca bíceps no crossover",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Polias altas na linha dos ombros, flexione os cotovelos mantendo tensão contínua.",
+            muscleGroup: "Bíceps Braquial",
+            target: "arms"
+          },
+          {
+            name: "Rosca invertida",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Pegada pronada (palmas para baixo), antebraço ativo e controle no movimento.",
+            muscleGroup: "Braquiorradial e Antebraço",
+            target: "arms"
+          },
+          {
+            name: "Tríceps pulley na corda",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Abra a corda no final da extensão com contração máxima nos tríceps.",
+            muscleGroup: "Tríceps Lateral/Medial",
+            target: "arms"
+          },
+          {
+            name: "Tríceps francês",
+            sets: 3,
+            reps: "10-12",
+            rest: 60,
+            instructions: "Controle da descida mantendo os braços verticais.",
+            muscleGroup: "Tríceps Cabeça Longa",
+            target: "arms"
+          },
+          {
+            name: "Tríceps coice na polia",
+            sets: 3,
+            reps: "12-15",
+            rest: 45,
+            instructions: "Braço paralelo ao chão, estenda o antebraço finalizando o tríceps.",
+            muscleGroup: "Isolamento de Tríceps",
+            target: "arms"
+          },
+          {
+            name: "Abdominal remador",
+            sets: 3,
+            reps: "12-15",
+            rest: 30,
+            instructions: "Flexione pernas e tronco simultaneamente abraçando os joelhos com controle.",
+            muscleGroup: "Reto Abdominal",
+            target: "chest"
+          }
+        ]
+      }
+    ];
+
+    // Estado do App
+    let currentDayIndex = 0;
+    // userLogs armazena: { [dayId_exerciseIdx]: { completedSets: [bool], weights: [num], reps: [num] } }
+    let userLogs = {};
+    
+    // Timer State
+    let timerInterval = null;
+    let timerTotal = 60;
+    let timerRemaining = 0;
+    let synth = null;
+
+    // Inicialização do Tone.js para beep de finalização
+    function playBeep(isHigh = false) {
+      try {
+        if (!synth) {
+          synth = new Tone.Synth({
+            oscillator: { type: "sine" },
+            envelope: { attack: 0.01, decay: 0.1, sustain: 0.1, release: 0.1 }
+          }).toDestination();
+        }
+        if (Tone.context.state !== 'running') {
+          Tone.context.resume();
+        }
+        synth.triggerAttackRelease(isHigh ? "C6" : "G5", "16n");
+      } catch (e) {
+        console.log("Audio not allowed yet or error:", e);
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.innerText = message;
+      toast.classList.remove('-translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('-translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    function startRestTimer(seconds, exerciseName = "Próxima série") {
+      clearInterval(timerInterval);
+      timerTotal = seconds;
+      timerRemaining = seconds;
+      
+      const restBar = document.getElementById('rest-timer-bar');
+      const label = document.getElementById('timer-label');
+      label.innerText = exerciseName.length > 18 ? exerciseName.substring(0, 18) + "..." : exerciseName;
+      
+      restBar.classList.remove('translate-y-full');
+      updateTimerDisplay();
+      
+      // Feedback tátil no mobile se disponível
+      if (navigator.vibrate) navigator.vibrate(50);
+
+      timerInterval = setInterval(() => {
+        timerRemaining--;
+        updateTimerDisplay();
+        
+        // Contagem regressiva nos 3 segundos finais
+        if (timerRemaining === 3 || timerRemaining === 2 || timerRemaining === 1) {
+          playBeep(false);
+          if (navigator.vibrate) navigator.vibrate(60);
+        }
+        
+        if (timerRemaining <= 0) {
+          clearInterval(timerInterval);
+          playBeep(true);
+          if (navigator.vibrate) navigator.vibrate([100, 50, 100]);
+          showToast("⏰ Tempo de descanso encerrado! Hora de treinar.");
+          setTimeout(() => {
+            if (timerRemaining <= 0) {
+              restBar.classList.add('translate-y-full');
+            }
+          }, 4000);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const secondsEl = document.getElementById('timer-seconds');
+      const ringEl = document.getElementById('timer-progress-ring');
+      secondsEl.innerText = `${timerRemaining}s`;
+      
+      const circumference = 2 * Math.PI * 18; // ~113.1
+      const progress = timerTotal > 0 ? (timerRemaining / timerTotal) : 0;
+      const offset = circumference * (1 - progress);
+      ringEl.style.strokeDashoffset = offset;
+    }
+
+    function renderDayTabs() {
+      const container = document.getElementById('day-tabs-container');
+      container.innerHTML = '';
+      
+      workoutData.forEach((day, idx) => {
+        const isActive = idx === currentDayIndex;
+        const btn = document.createElement('button');
+        btn.className = `flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-semibold tap-scale transition-all flex flex-col items-center min-w-[72px] border ${
+          isActive 
+            ? 'bg-gradient-to-b from-cyan-500 to-cyan-600 text-slate-950 border-cyan-400 font-bold shadow-lg shadow-cyan-500/20' 
+            : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border-slate-800'
+        }`;
+        btn.innerHTML = `
+          <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">${day.tag}</span>
+          <span class="text-xs font-extrabold mt-0.5">${day.dayName}</span>
+        `;
+        btn.onclick = () => {
+          currentDayIndex = idx;
+          renderDayTabs();
+          renderDayContent();
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    function renderDayContent() {
+      const day = workoutData[currentDayIndex];
+      
+      // Atualiza Cabeçalhos e Badges
+      document.getElementById('current-day-badge').innerText = `${day.fullName} • ${day.title}`;
+      document.getElementById('day-tag').innerText = day.tag;
+      document.getElementById('day-title').innerText = day.title;
+      document.getElementById('day-desc').innerText = `${day.exercises.length} Exercícios • Foco em execução limpa`;
+      document.getElementById('day-icon-container').innerHTML = getMuscleSVG(day.muscleType);
+      
+      // Total de Séries
+      let totalSets = 0;
+      day.exercises.forEach(ex => totalSets += ex.sets);
+      document.getElementById('total-sets-count').innerText = `${totalSets} Séries Totais`;
+      document.getElementById('estimated-time').innerText = `~${Math.round(totalSets * 2.5)} min`;
+
+      // Renderiza Exercícios
+      const listEl = document.getElementById('exercise-list');
+      listEl.innerHTML = '';
+
+      day.exercises.forEach((ex, exIdx) => {
+        const key = `${day.id}_${exIdx}`;
+        if (!userLogs[key]) {
+          userLogs[key] = {
+            completedSets: new Array(ex.sets).fill(false),
+            weights: new Array(ex.sets).fill(''),
+            reps: new Array(ex.sets).fill(ex.reps.split('-')[0] || '10')
+          };
+        }
+        const state = userLogs[key];
+
+        const card = document.createElement('div');
+        card.className = "rounded-2xl bg-slate-900/90 border border-slate-800/90 p-4 shadow-sm hover:border-slate-700/80 transition-all";
+        
+        // Header do Exercício com Ilustração e Nome
+        let setsHTML = '';
+        for (let s = 0; s < ex.sets; s++) {
+          const isDone = state.completedSets[s];
+          setsHTML += `
+            <div class="flex items-center justify-between py-1.5 px-2 rounded-lg ${isDone ? 'bg-emerald-950/40 border border-emerald-500/30' : 'bg-slate-800/50 border border-slate-700/40'} text-xs">
+              <span class="font-bold w-12 text-slate-400">Série ${s + 1}</span>
+              
+              <!-- Input Carga -->
+              <div class="flex items-center gap-1">
+                <input type="number" placeholder="kg" value="${state.weights[s]}" 
+                  onchange="updateWeight('${key}', ${s}, this.value)"
+                  class="w-14 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-white font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">kg</span>
+              </div>
+
+              <!-- Input Repetições -->
+              <div class="flex items-center gap-1">
+                <input type="text" placeholder="${ex.reps}" value="${state.reps[s]}" 
+                  onchange="updateReps('${key}', ${s}, this.value)"
+                  class="w-12 bg-slate-950/80 border border-slate-700 rounded px-1.5 py-1 text-center text-xs text-cyan-300 font-mono focus:border-cyan-400 outline-none">
+                <span class="text-[10px] text-slate-500">reps</span>
+              </div>
+
+              <!-- Botão Check / Start Rest Timer -->
+              <button onclick="toggleSet('${key}', ${s}, ${ex.rest}, '${ex.name}')" 
+                class="p-1.5 rounded-lg tap-scale transition-all flex items-center justify-center ${
+                  isDone 
+                    ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20' 
+                    : 'bg-slate-700 hover:bg-slate-600 text-slate-300'
+                }">
+                <svg class="w-4 h-4 ${isDone ? 'stroke-[3]' : 'stroke-[2]'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+              </button>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-slate-800/80 border border-slate-700/50 flex-shrink-0">
+                ${getMuscleSVG(ex.target || day.muscleType)}
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                  ${ex.muscleGroup}
+                </span>
+                <h3 class="text-sm font-bold text-white mt-1">${ex.name}</h3>
+                <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-0.5">
+                  <span class="font-medium text-slate-300">${ex.sets} séries × ${ex.reps}</span>
+                  <span>•</span>
+                  <span class="text-amber-400 flex items-center gap-0.5">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    ${ex.rest}s descanso
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <button onclick="startRestTimer(${ex.rest}, '${ex.name}')" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 tap-scale border border-slate-700/60" title="Iniciar Descanso">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Instruções de Execução do PDF -->
+          <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-3 text-[11px] text-slate-300 flex items-start gap-2">
+            <span class="text-cyan-400 font-bold text-xs">🎯</span>
+            <p class="leading-tight"><strong class="text-slate-200">Execução:</strong> ${ex.instructions}</p>
+          </div>
+
+          <!-- Lista de Séries -->
+          <div class="space-y-1.5">
+            ${setsHTML}
+          </div>
+        `;
+        listEl.appendChild(card);
+      });
+
+      calculateProgress();
+    }
+
+    function toggleSet(key, setIdx, restTime, exName) {
+      const state = userLogs[key];
+      const wasDone = state.completedSets[setIdx];
+      state.completedSets[setIdx] = !wasDone;
+      
+      if (!wasDone) {
+        // Dispara timer de descanso automaticamente ao concluir série
+        startRestTimer(restTime, exName);
+        showToast(`Série ${setIdx + 1} concluída! Descanso iniciado.`);
+      }
+      
+      renderDayContent();
+    }
+
+    function updateWeight(key, setIdx, val) {
+      if (userLogs[key]) {
+        userLogs[key].weights[setIdx] = val;
+      }
+    }
+
+    function updateReps(key, setIdx, val) {
+      if (userLogs[key]) {
+        userLogs[key].reps[setIdx] = val;
+      }
+    }
+
+    function calculateProgress() {
+      const day = workoutData[currentDayIndex];
+      let total = 0;
+      let completed = 0;
+
+      day.exercises.forEach((ex, exIdx) => {
+        const key = `${day.id}_${exIdx}`;
+        total += ex.sets;
+        if (userLogs[key]) {
+          userLogs[key].completedSets.forEach(done => {
+            if (done) completed++;
+          });
+        }
+      });
+
+      const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+      document.getElementById('session-progress-text').innerText = `${pct}% Concluído (${completed}/${total})`;
+      document.getElementById('session-progress-bar').style.width = `${pct}%`;
+    }
+
+    // Eventos dos botões de controle de timer
+    document.getElementById('btn-add-15s').onclick = () => {
+      timerRemaining += 15;
+      timerTotal += 15;
+      updateTimerDisplay();
+      showToast("+15s adicionados ao descanso!");
+    };
+
+    document.getElementById('btn-skip-timer').onclick = () => {
+      clearInterval(timerInterval);
+      document.getElementById('rest-timer-bar').classList.add('translate-y-full');
+      showToast("Descanso finalizado!");
+    };
+
+    // Evento de reset do dia atual
+    document.getElementById('btn-reset-day').onclick = () => {
+      const day = workoutData[currentDayIndex];
+      day.exercises.forEach((ex, exIdx) => {
+        const key = `${day.id}_${exIdx}`;
+        if (userLogs[key]) {
+          userLogs[key].completedSets.fill(false);
+        }
+      });
+      renderDayContent();
+      showToast("Séries do dia reiniciadas!");
+    };
+
+    // Modais
+    const modalGuide = document.getElementById('modal-guide');
+    const modalInfo = document.getElementById('modal-info');
+
+    document.getElementById('btn-guide-modal').onclick = () => modalGuide.classList.remove('hidden');
+    document.getElementById('btn-close-guide').onclick = () => modalGuide.classList.add('hidden');
+
+    document.getElementById('btn-info-modal').onclick = () => modalInfo.classList.remove('hidden');
+    document.getElementById('btn-close-info').onclick = () => modalInfo.classList.add('hidden');
+
+    // Fechar ao clicar fora
+    [modalGuide, modalInfo].forEach(modal => {
+      modal.onclick = (e) => {
+        if (e.target === modal) modal.classList.add('hidden');
+      };
+    });
+
+    // Iniciar
+    window.onload = () => {
+      renderDayTabs();
+      renderDayContent();
+    };
+  </script>
+
+</body></html>
